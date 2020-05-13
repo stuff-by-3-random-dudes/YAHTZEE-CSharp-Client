@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using YAHTZEE_CSharp_Client.Classes;
 
 namespace YAHTZEE_CSharp_Client.UI
 {
@@ -20,9 +21,25 @@ namespace YAHTZEE_CSharp_Client.UI
     /// </summary>
     public partial class MainWindow : Window
     {
+        MainViewModel mvm;
         public MainWindow()
         {
             InitializeComponent();
+            mvm = FindResource("mvm") as MainViewModel;
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            if(!String.IsNullOrWhiteSpace(tb_PName.Text))
+            {
+                mvm.AddPlayer(new Player(tb_PName.Text));
+                tb_PName.Text = string.Empty;
+            }
+        }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            mvm.ResetPlayerList();
         }
     }
 }
