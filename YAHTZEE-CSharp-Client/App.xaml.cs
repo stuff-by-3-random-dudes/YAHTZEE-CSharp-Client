@@ -24,13 +24,13 @@ namespace YAHTZEE_CSharp_Client
             switch (Thread.CurrentThread.CurrentCulture.ToString())
             {
                 case "en-US":
-                    dict.Source = new Uri("..\\LanguageEN-US.xaml", UriKind.Relative);
+                    dict.Source = new Uri("..\\LanguageFiles\\LanguageEN-US.xaml", UriKind.Relative);
                     break;
                 case "de-DE":
-                    dict.Source = new Uri("..\\LanguageDE-DE.xaml", UriKind.Relative);
+                    dict.Source = new Uri("..\\LanguageFiles\\LanguageDE-DE.xaml", UriKind.Relative);
                     break;
                 default:
-                    dict.Source = new Uri("..\\LanguageEN-US.xaml", UriKind.Relative);
+                    dict.Source = new Uri("..\\LanguageFiles\\LanguageEN-US.xaml", UriKind.Relative);
                     break;
             }
             this.Resources.MergedDictionaries.Add(dict);

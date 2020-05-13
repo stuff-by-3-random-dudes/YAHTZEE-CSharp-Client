@@ -13,7 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace YAHTZEE_CSharp_Client
+namespace YAHTZEE_CSharp_Client.UI
 {
     /// <summary>
     /// Interaktionslogik für MainWindow.xaml
