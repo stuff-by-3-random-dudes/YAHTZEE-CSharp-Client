@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Security;
-using System.Text;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
 using YAHTZEE_CSharp_Client.Classes;
 
 namespace YAHTZEE_CSharp_Client
@@ -15,7 +10,9 @@ namespace YAHTZEE_CSharp_Client
         public List<Player> PlayerList
         {
             get { return playerList; }
-            set { playerList = value;
+            set
+            {
+                playerList = value;
                 OnPropertyChanged();
             }
         }
@@ -27,7 +24,7 @@ namespace YAHTZEE_CSharp_Client
 
         public void AddPlayer(Player p)
         {
-            
+
             PlayerList.Add(p);
             var save = PlayerList;
             PlayerList = null;
