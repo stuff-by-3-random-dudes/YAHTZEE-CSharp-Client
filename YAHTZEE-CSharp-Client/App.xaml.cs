@@ -1,10 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Configuration;
-using System.Data;
-using System.Linq;
 using System.Threading;
-using System.Threading.Tasks;
 using System.Windows;
 
 namespace YAHTZEE_CSharp_Client
@@ -18,7 +13,7 @@ namespace YAHTZEE_CSharp_Client
         {
             SetLanguageDictionary();
         }
-            private void SetLanguageDictionary()
+        private void SetLanguageDictionary()
         {
             ResourceDictionary dict = new ResourceDictionary();
             switch (Thread.CurrentThread.CurrentCulture.ToString())
