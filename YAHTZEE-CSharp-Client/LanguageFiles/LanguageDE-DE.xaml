@@ -7,4 +7,6 @@
     <system:String x:Key="name2">Name:</system:String>
     <system:String x:Key="clearPlayers">SpielerListe Leeren</system:String>
     <system:String x:Key="addPlayer">Spieler Hinzufügen</system:String>
+    <system:String x:Key="cmDelete">löschen</system:String>
+    <system:String x:Key="cmRename">umbenennen</system:String>
 </ResourceDictionary>

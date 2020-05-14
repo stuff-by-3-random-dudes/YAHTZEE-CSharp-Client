@@ -7,4 +7,6 @@
     <system:String x:Key="name2">Name:</system:String>
     <system:String x:Key="clearPlayers">Clear Players</system:String>
     <system:String x:Key="addPlayer">Add Player</system:String>
+    <system:String x:Key="cmDelete">delete</system:String>
+    <system:String x:Key="cmRename">rename</system:String>
 </ResourceDictionary>

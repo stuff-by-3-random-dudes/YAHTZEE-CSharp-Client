@@ -13,8 +13,8 @@
             </DataGrid.Columns>
             <DataGrid.ContextMenu>
                 <ContextMenu Name="cm" StaysOpen="True">
-                    <MenuItem Header="Rename"/>
-                    <MenuItem Header="Delete" Click="MenuItem_ClickDelete"/>
+                    <MenuItem Header="{DynamicResource cmRename}"/>
+                    <MenuItem Header="{DynamicResource cmDelete}" Click="MenuItem_ClickDelete"/>
                 </ContextMenu>
             </DataGrid.ContextMenu>
         </DataGrid>
