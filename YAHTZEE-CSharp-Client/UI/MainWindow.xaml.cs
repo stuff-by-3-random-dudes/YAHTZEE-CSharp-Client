@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Windows;
-using YAHTZEE_CSharp_Client.Classes;
 
 namespace YAHTZEE_CSharp_Client.UI
 {
@@ -18,11 +17,15 @@ namespace YAHTZEE_CSharp_Client.UI
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if (!String.IsNullOrWhiteSpace(tb_PName.Text))
+            try
             {
-                mvm.AddPlayer(new Player(tb_PName.Text));
-                tb_PName.Text = string.Empty;
+                mvm.AddPlayer(tb_PName.Text);
             }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            tb_PName.Text = String.Empty;
         }
 
         private void Button_Click_1(object sender, RoutedEventArgs e)
@@ -30,9 +33,16 @@ namespace YAHTZEE_CSharp_Client.UI
             mvm.ResetPlayerList();
         }
 
-        private void cm_Opened(object sender, RoutedEventArgs e)
+        private void MenuItem_ClickDelete(object sender, RoutedEventArgs e)
         {
-
+            try
+            {
+                mvm.RemoveSelectedPlayer();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }

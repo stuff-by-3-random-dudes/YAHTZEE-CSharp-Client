@@ -7,10 +7,16 @@
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="448.63">
     <Grid DataContext="{StaticResource mvm}">
-        <DataGrid HorizontalAlignment="Left" Height="347" Margin="247,31,0,0" VerticalAlignment="Top" Width="184" AutoGenerateColumns="False" ItemsSource="{Binding PlayerList}" CanUserAddRows="False"  CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" IsReadOnly="True">
+        <DataGrid HorizontalAlignment="Left" Height="347" Margin="247,31,0,0" VerticalAlignment="Top" Width="184" AutoGenerateColumns="False" ItemsSource="{Binding PlayerList}" SelectedItem="{Binding SelectedPlayer}" SelectionMode="Single" CanUserAddRows="False"  CanUserDeleteRows="False" CanUserReorderColumns="False" CanUserResizeColumns="False" CanUserSortColumns="False" IsReadOnly="True">
             <DataGrid.Columns>
                 <DataGridTextColumn Header="{DynamicResource name}" Binding="{Binding Name}" Width="*"/>
             </DataGrid.Columns>
+            <DataGrid.ContextMenu>
+                <ContextMenu Name="cm" StaysOpen="True">
+                    <MenuItem Header="Rename"/>
+                    <MenuItem Header="Delete" Click="MenuItem_ClickDelete"/>
+                </ContextMenu>
+            </DataGrid.ContextMenu>
         </DataGrid>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="63,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="167" Name="tb_PName"/>
         <Button Content="{DynamicResource addPlayer}" HorizontalAlignment="Right" Margin="0,64,203,0" VerticalAlignment="Top"  Width="Auto" Click="Button_Click" Height="22" FlowDirection="RightToLeft" HorizontalContentAlignment="Right" IsDefault="True" />
