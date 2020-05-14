@@ -15,7 +15,7 @@ namespace YAHTZEE_CSharp_Client.UI
             mvm = FindResource("mvm") as MainViewModel;
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void BtnAddPlayer_Click(object sender, RoutedEventArgs e)
         {
             try
             {
@@ -28,7 +28,7 @@ namespace YAHTZEE_CSharp_Client.UI
             tb_PName.Text = String.Empty;
         }
 
-        private void Button_Click_1(object sender, RoutedEventArgs e)
+        private void BtnResetPlayers_Click(object sender, RoutedEventArgs e)
         {
             mvm.ResetPlayerList();
         }
@@ -37,7 +37,7 @@ namespace YAHTZEE_CSharp_Client.UI
         {
             try
             {
-                mvm.RemoveSelectedPlayer();
+                mvm.DeleteSelectedPlayer();
             }
             catch (Exception ex)
             {

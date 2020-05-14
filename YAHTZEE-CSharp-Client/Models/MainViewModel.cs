@@ -25,7 +25,7 @@ namespace YAHTZEE_CSharp_Client
 
         }
 
-        public void RemoveSelectedPlayer()
+        public void DeleteSelectedPlayer()
         {
             if (SelectedPlayer == null)
             {

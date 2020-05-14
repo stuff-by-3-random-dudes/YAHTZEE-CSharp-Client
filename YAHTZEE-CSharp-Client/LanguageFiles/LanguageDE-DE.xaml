@@ -9,4 +9,5 @@
     <system:String x:Key="addPlayer">Spieler Hinzufügen</system:String>
     <system:String x:Key="cmDelete">löschen</system:String>
     <system:String x:Key="cmRename">umbenennen</system:String>
+    <system:String x:Key="playerWindowTitle">Spielerliste</system:String>
 </ResourceDictionary>
