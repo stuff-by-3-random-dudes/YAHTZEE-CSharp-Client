@@ -1,17 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
-using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 using YAHTZEE_CSharp_Client.Classes;
 
 namespace YAHTZEE_CSharp_Client.UI
@@ -30,7 +18,7 @@ namespace YAHTZEE_CSharp_Client.UI
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            if(!String.IsNullOrWhiteSpace(tb_PName.Text))
+            if (!String.IsNullOrWhiteSpace(tb_PName.Text))
             {
                 mvm.AddPlayer(new Player(tb_PName.Text));
                 tb_PName.Text = string.Empty;
@@ -40,6 +28,11 @@ namespace YAHTZEE_CSharp_Client.UI
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             mvm.ResetPlayerList();
+        }
+
+        private void cm_Opened(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

@@ -51,13 +51,13 @@ namespace YAHTZEE_CSharp_Client.Classes
 
         public Dice(Button b)
         {
-            diceButton = b;
-            b.Click += Save;
+            DiceButton = b;
+            DiceButton.Click += Save;
         }
 
         public void Save(object sender, RoutedEventArgs e)
         {
-            IsSaved = !IsSaved;
+            IsSaved = true;
         }
 
         public void Roll()
@@ -67,7 +67,7 @@ namespace YAHTZEE_CSharp_Client.Classes
                 Eyes = random.Next(1, 7);
             }
         }
-        public static void RollAll(List<Dice> dices)
+        public static void RollAll(IEnumerable<Dice> dices)
         {
             foreach (Dice d in dices)
             {

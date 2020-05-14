@@ -11,10 +11,9 @@
             <DataGrid.Columns>
                 <DataGridTextColumn Header="{DynamicResource name}" Binding="{Binding Name}" Width="*"/>
             </DataGrid.Columns>
-
         </DataGrid>
         <TextBox HorizontalAlignment="Left" Height="23" Margin="63,31,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="167" Name="tb_PName"/>
-        <Button Content="{DynamicResource addPlayer}" HorizontalAlignment="Right" Margin="0,64,203,0" VerticalAlignment="Top"  Width="Auto" Click="Button_Click" Height="22" FlowDirection="RightToLeft" HorizontalContentAlignment="Right" />
+        <Button Content="{DynamicResource addPlayer}" HorizontalAlignment="Right" Margin="0,64,203,0" VerticalAlignment="Top"  Width="Auto" Click="Button_Click" Height="22" FlowDirection="RightToLeft" HorizontalContentAlignment="Right" IsDefault="True" />
         <Label Content="{DynamicResource name2}" HorizontalAlignment="Left" Margin="10,28,0,0" VerticalAlignment="Top"/>
         <Button Content="{DynamicResource clearPlayers}" Margin="0,0,2,6" VerticalAlignment="Bottom" Width="Auto" Click="Button_Click_1" HorizontalAlignment="Right" Height="23"/>
 
